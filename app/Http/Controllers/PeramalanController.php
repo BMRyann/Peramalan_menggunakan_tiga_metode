@@ -119,8 +119,8 @@ class PeramalanController extends Controller
             $sumX2 += ($x * $x);
         }
 
-        $a = (($n2) * $sumY - $sumX * $sumXY) / ($n2 * $sumX2 - $sumX * $sumX);
-        $b = ($n2 * $sumXY - $sumX * $sumY) / ($n2 * $sumX2 - $sumX * $sumX);
+        $b = (($n2 * $sumXY) - ($sumX * $sumY)) / (($n2 * $sumX2) - ($sumX * $sumX));
+        $a = ($sumY - ($b * $sumX)) / $n2;
 
         // =====================================
         // 6. HASIL PERAMALAN
